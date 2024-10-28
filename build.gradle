@@ -16,10 +16,6 @@ repositories {
     mavenCentral()
 }
 
-ext {
-    javaCfEnvVersion = '3.1.2'
-}
-
 dependencies {
     // Spring Boot
     implementation "org.springframework.boot:spring-boot-starter-web"

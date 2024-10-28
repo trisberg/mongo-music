@@ -71,35 +71,9 @@ If you want to expose your application with a domain name and route traffic from
 
 ## Deploying the application to Tanzu Platform for Kubernetes
 
-You can deploy a mongoDB instance using a provided service type.
-To list available service types use:
-
-```shell
-tanzu services type list
-```
-
-Then, create the service instance using:
-
-```shell
-tanzu services create MongoDBInstance/music
-```
-
-You can list the services you have created using:
-
-```shell
-tanzu services list
-```
 ### Build and deploy the app
 
 Change to the root directory of your generated app.
-
-#### Configure service binding for the app
-
-Define the service binding name and type using:
-
-```shell
-tanzu app config servicebinding set music=mongodb
-```
 
 #### Building from local source
 
@@ -119,15 +93,42 @@ Start the app deployment by running:
 tanzu deploy --from-build ./prebuilt
 ```
 
-#### Bind your service to the deployed app
+#### Building and deploying the app in one step
+
+Instead of building and deploying in separate steps, you can build and deploy the app with a single command.
+Just run:
+
+```sh
+tanzu deploy
+```
+
+### Create the service and bind it to the app
+
+
+You can deploy a mongoDB instance using a provided service type.
+To list available service types use:
 
 ```shell
-tanzu service bind MongoDBInstance/music ContainerApp/mongo-music --as music
+tanzu services type list
+```
+
+Then, create the service instance using:
+
+```shell
+tanzu services create MongoDBInstance/music
+```
+
+When prompted, bind the service to your deployed app.
+
+You can list the services you have created using:
+
+```shell
+tanzu services list
 ```
 
 #### Scale the number of instances
 
-Run this command to scale to 1 instance:
+When the service you created becomes `Ready`, then you can run this command to scale the app to 1 instance:
 
 ```shell
 tanzu app scale mongo-music --instances=1
@@ -142,4 +143,6 @@ Use the following command to start the port-forward:
 ```shell
 tanzu app port-forward mongo-music --port 8080
 ```
+
+Then you can access the app using http://localhost:8080.
 

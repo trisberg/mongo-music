@@ -1,0 +1,11 @@
+id: 4b8b7f6a-af97-492f-bd50-2e70d69a6e12
+name: spring-music
+timestamp: 2024-10-24T15:18:42.539259Z
+source: INTELLIJ
+username: risbergt
+options:
+  deploymentType: tpfork8s
+  persistenceType: mongodb
+  includeBuildToolWrapper: true
+  javaVersion: "21"
+  projectName: mongo-music

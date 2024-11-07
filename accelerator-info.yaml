@@ -1,20 +1,20 @@
-id: bec5f90e-ecf1-40a7-ad96-ec68d55edc7c
+id: 6fc6c1ac-374e-4262-a68a-a4a138f969c3
 name: spring-music
-timestamp: 2024-10-29T19:29:23.298688Z
+timestamp: 2024-11-07T15:16:08.274822Z
 source: INTELLIJ
 username: risbergt
 fragments:
-  build-wrapper-gradle:
-    name: build-wrapper-gradle
-    git:
-      url: https://github.com/vmware-tanzu/application-accelerator-samples
-      subPath: fragments/build-wrapper-gradle
-      ref: main
   java-version:
     name: java-version
     git:
       url: https://github.com/vmware-tanzu/application-accelerator-samples
       subPath: fragments/java-version
+      ref: main
+  build-wrapper-gradle:
+    name: build-wrapper-gradle
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples
+      subPath: fragments/build-wrapper-gradle
       ref: main
 accelerator:
   name: spring-music

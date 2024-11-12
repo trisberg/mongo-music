@@ -60,8 +60,6 @@ If you want to expose your application with a domain name and route traffic from
 
 Change to the root directory of your generated app.
 
-#### Building and deploying the app in one step
-
 You can build and deploy the app with a single command.
 Just run:
 
@@ -69,36 +67,23 @@ Just run:
 tanzu deploy
 ```
 
-### Create the service and bind it to the app
+### Check the status of the service bound to the app
 
+The deployment includes a MongoDB instance using a provided service type.
+The instance is bound to the app.
 
-You can deploy a mongoDB instance using a provided service type.
-To list available service types use:
-
-```shell
-tanzu services type list
-```
-
-Then, create the service instance using:
-
-```shell
-tanzu services create MongoDBInstance/music
-```
-
-When prompted, bind the service to your deployed app.
-
-You can list the services you have created using:
+You can list the services created using:
 
 ```shell
 tanzu services list
 ```
 
-#### Scale the number of instances
+### Check the status of the app deployment
 
-When the service you created becomes `Ready`, then you can run this command to scale the app to 1 instance:
+You can run this command to see the status of the app deployment:
 
 ```shell
-tanzu app scale mongo-music --instances=1
+tanzu apps get mongo-music
 ```
 
 ### Use port-forward to access an app instance

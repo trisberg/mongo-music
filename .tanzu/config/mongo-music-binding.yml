@@ -1,0 +1,14 @@
+apiVersion: services.tanzu.vmware.com/v1
+kind: ServiceBinding
+metadata:
+    name: music-1ef3c9
+spec:
+  alias: music
+  serviceRef:
+    apiGroup: bitnami.database.tanzu.vmware.com
+    kind: MongoDBInstance
+    name: music
+  targetRef:
+    apiGroup: apps.tanzu.vmware.com
+    kind: ContainerApp
+    name: mongo-music

@@ -1,6 +1,6 @@
-id: 6fc6c1ac-374e-4262-a68a-a4a138f969c3
+id: 9205ff4c-2e42-45b7-9060-bf972f34b770
 name: spring-music
-timestamp: 2024-11-07T15:16:08.274822Z
+timestamp: 2024-11-12T14:31:47.218002Z
 source: INTELLIJ
 username: risbergt
 fragments:
@@ -23,6 +23,7 @@ accelerator:
     subPath: spring-music
     ref: main
 options:
+  databaseType: h2
   deploymentType: tpfork8s
   persistenceType: mongodb
   includeBuildToolWrapper: true

@@ -8,7 +8,6 @@ public class Album {
     private String releaseYear;
     private String genre;
     private int trackCount;
-    private String albumId;
 
     public Album() {
     }
@@ -66,13 +65,5 @@ public class Album {
 
     public void setTrackCount(int trackCount) {
         this.trackCount = trackCount;
-    }
-
-    public String getAlbumId() {
-        return albumId;
-    }
-
-    public void setAlbumId(String albumId) {
-        this.albumId = albumId;
     }
 }

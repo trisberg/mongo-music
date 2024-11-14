@@ -1,7 +1,7 @@
 apiVersion: services.tanzu.vmware.com/v1
 kind: ServiceBinding
 metadata:
-    name: music-1ef3c9
+    name: music-14fc52
 spec:
   alias: music
   serviceRef:
